@@ -3,10 +3,10 @@
 
 INT(WINAPI* OriginalMessageBox)(HWND hWnd, LPCTSTR lpText, LPCTSTR lpCaption, UINT uType) = MessageBox;
 
-BOOL WINAPI HookedMessageBox(HWND hWnd, LPCTSTR lpText, LPCTSTR lpCaption, UINT uType)
+INT WINAPI HookedMessageBox(HWND hWnd, LPCTSTR lpText, LPCTSTR lpCaption, UINT uType)
 {
     OriginalMessageBox(0, L"Hooked!", L"Hooked!", 0);
-    return TRUE;
+    return 0;
 }
 
 BOOL AddHooks() {
