@@ -7,4 +7,4 @@ Will output the generated shellcode in raw, base64 and a \x notated hexstring fo
 Use donut for .NET assemblies, and sRDI for essentially everything else.
 
 
-> python3 shellcode_generator.py -f HelloWorld.dll -m srdi
+> python3 generator.py -f HelloWorld.dll -m srdi
